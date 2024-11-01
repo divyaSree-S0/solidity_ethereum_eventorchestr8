@@ -1,0 +1,130 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ticketId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "createTicket",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ticketId",
+						"type": "bytes32"
+					}
+				],
+				"name": "getTicketStatus",
+				"outputs": [
+					{
+						"internalType": "enum Ticketing.Status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "tickets",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "ticketId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Ticketing.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_ticketId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "enum Ticketing.Status",
+						"name": "newStatus",
+						"type": "uint8"
+					}
+				],
+				"name": "updateTicketStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Ticketing.sol": "Ticketing"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Ticketing.sol": {
+			"keccak256": "0xac3b8a4e644a566e5e4849c960a5852c3837ba1db1e1b69d0f52906274e91bb4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://df077771c8d681c475d1a925d4797abc5bbd7a063832e66e25eab8c4ad4c18c0",
+				"dweb:/ipfs/QmRDewEiCamjDaA7JZzaMNr7p7M315s9ZXwerQCVPhZaMX"
+			]
+		}
+	},
+	"version": 1
+}
