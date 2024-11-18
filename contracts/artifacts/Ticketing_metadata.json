@@ -6,6 +6,56 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "ticketId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint32",
+						"name": "price",
+						"type": "uint32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint64",
+						"name": "paymentId",
+						"type": "uint64"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "TicketCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "ticketId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum Ticketing.Status",
+						"name": "newStatus",
+						"type": "uint8"
+					}
+				],
+				"name": "TicketStatusUpdated",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes32",
@@ -13,9 +63,14 @@
 						"type": "bytes32"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "uint32",
 						"name": "_price",
-						"type": "uint256"
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint64",
+						"name": "_paymentId",
+						"type": "uint64"
 					}
 				],
 				"name": "createTicket",
@@ -31,12 +86,27 @@
 						"type": "bytes32"
 					}
 				],
-				"name": "getTicketStatus",
+				"name": "getTicketDetails",
 				"outputs": [
 					{
+						"internalType": "uint32",
+						"name": "price",
+						"type": "uint32"
+					},
+					{
 						"internalType": "enum Ticketing.Status",
-						"name": "",
+						"name": "status",
 						"type": "uint8"
+					},
+					{
+						"internalType": "uint64",
+						"name": "paymentId",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -58,14 +128,24 @@
 						"type": "bytes32"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "uint32",
 						"name": "price",
-						"type": "uint256"
+						"type": "uint32"
 					},
 					{
 						"internalType": "enum Ticketing.Status",
 						"name": "status",
 						"type": "uint8"
+					},
+					{
+						"internalType": "uint64",
+						"name": "paymentId",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -118,11 +198,11 @@
 	},
 	"sources": {
 		"contracts/Ticketing.sol": {
-			"keccak256": "0xac3b8a4e644a566e5e4849c960a5852c3837ba1db1e1b69d0f52906274e91bb4",
+			"keccak256": "0x0da5d3fcb62a04a28518a05ed22b7c7c5b35fdc42cef797ee115a156fd7e9c79",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://df077771c8d681c475d1a925d4797abc5bbd7a063832e66e25eab8c4ad4c18c0",
-				"dweb:/ipfs/QmRDewEiCamjDaA7JZzaMNr7p7M315s9ZXwerQCVPhZaMX"
+				"bzz-raw://eca393e7bf3b0bda1da6b1b2b6b6f13561df45bce06df944fc5759d1801efe22",
+				"dweb:/ipfs/QmX1ERmxj2paf1mziD4NkeT484arWdRNbRPBXtyZPeYf9w"
 			]
 		}
 	},
